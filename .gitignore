@@ -1,0 +1,14 @@
+__pycache__
+.idea
+.vscode
+
+.env
+
+*.jsonl
+*.out
+
+logs/
+slurm_output/
+data_cache/
+datasets/
+results/
