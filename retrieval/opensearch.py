@@ -3,7 +3,6 @@ import boto3
 from functools import cache
 from opensearchpy import OpenSearch, AWSV4SignerAuth, RequestsHttpConnection
 
-
 @cache
 def get_client(access_key_id: str = None, secret_access_key: str = None, region: str = None):
     if access_key_id is None:
@@ -24,9 +23,9 @@ def get_client(access_key_id: str = None, secret_access_key: str = None, region:
     )
     return aos_client
 
-
 def query_opensearch(query: str, top_k: int = 10) -> dict:
     """Query an OpenSearch index and return the results."""
     client = get_client()
     results = client.search(index=os.getenv("OPENSEARCH_INDEX_NAME"), body={"query": {"match": {"text": query}}, "size": top_k})
     return results
+    
