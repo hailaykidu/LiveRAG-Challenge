@@ -12,3 +12,7 @@ slurm_output/
 data_cache/
 datasets/
 results/
+__pycache__/
+*.pyc
+env/
+*.ipynb_checkpoints
