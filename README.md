@@ -1,8 +1,8 @@
-# RAGtifier
+# RAGtifier  
 
-We have implemented multiple RAG query strategies, reranking, and a few other things.
-Run all of them with different combinations of parameters and determine which one works best for the use case.
-
+RAGtifier is our team name. We have implemented multiple RAG query strategies, reranking techniques, and other related components.
+We run all of them using different parameter combinations to determine which configuration performs best for the Datamorgana QA use case.
+ 
 To reproduce the submitted results, use the parameters from `submit.sh`.
 
 ## Setup environment
