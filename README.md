@@ -1,4 +1,4 @@
-# #SIGIR 2025 LiveRAG Challenge
+# SIGIR 2025 LiveRAG Challenge
 The SIGIR'2025 LiveRAG Challenge is organized by TII (Technology Innovation Institute) with support from AI71, AWS, Pinecone, and Hugging Face. 
 
 # RAGtifier  
