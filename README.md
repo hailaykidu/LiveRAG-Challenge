@@ -1,3 +1,6 @@
+# #SIGIR 2025 LiveRAG Challenge
+The SIGIR'2025 LiveRAG Challenge is organized by TII (Technology Innovation Institute) with support from AI71, AWS, Pinecone, and Hugging Face. 
+
 # RAGtifier  
 
 RAGtifier is our team name. We have implemented multiple RAG query strategies, reranking techniques, and other related components.
