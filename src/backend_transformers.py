@@ -6,7 +6,6 @@ from loguru import logger
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
-
 def load_model(model_name: str) -> Tuple[AutoTokenizer, AutoModelForCausalLM, torch.device]:
     tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
     model = AutoModelForCausalLM.from_pretrained(model_name, trust_remote_code=True, device_map="auto", torch_dtype=torch.bfloat16, low_cpu_mem_usage=True).eval()
