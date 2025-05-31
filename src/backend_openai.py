@@ -10,7 +10,6 @@ def load_model(model_name: str) -> OpenAI:
     )
     return openai
 
-
 def chat_completions(
     openai: OpenAI,
     prompt: str,
