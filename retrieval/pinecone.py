@@ -10,17 +10,14 @@ from transformers import AutoModel, AutoTokenizer
 def has_mps():
     return torch.backends.mps.is_available()
 
-
 @cache
 def has_cuda():
     return torch.cuda.is_available()
-
 
 @cache
 def get_tokenizer(model_name: str = "intfloat/e5-base-v2"):
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     return tokenizer
-
 
 @cache
 def get_model(model_name: str = "intfloat/e5-base-v2"):
