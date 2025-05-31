@@ -7,7 +7,6 @@ from retrieval.pinecone import query_pinecone
 
 RetrievalFunction = Callable[[str, int], Tuple[List[str], List[str]]]
 
-
 def dummy_retrieval(query: str, ret_top_k: int) -> Tuple[List[str], List[str]]:
     """
     This function does not perform any retrieval and returns empty lists.
