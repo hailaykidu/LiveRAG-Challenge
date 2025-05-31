@@ -6,7 +6,6 @@ import gc
 _rbackend_model = None
 _rbackend_fn = None
 
-
 def set_backend(backend_type: str, model_name: str):
     global _rbackend_model, _rbackend_fn
     if backend_type == "local":
@@ -32,7 +31,6 @@ def _call_backend(*args, **kwargs):
         raise ValueError("Backend not set. Please set the backend using `set_backend`")
 
     return _rbackend_fn(_rbackend_model, *args, **kwargs)
-
 
 def rerank_docs(query: str, doc_ids: List[str], doc_passages: List[str], model_name: str, top_k: int = None) -> Tuple[List[str], List[str]]:
     scores = _call_backend(query, doc_passages)
