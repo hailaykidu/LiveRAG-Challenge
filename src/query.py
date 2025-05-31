@@ -6,7 +6,6 @@ import gc
 _backend_model = None
 _backend_fn = None
 
-
 def set_backend(backend_type: str, model_name: str):
     global _backend_model, _backend_fn
     if backend_type == "local":
@@ -49,12 +48,10 @@ Query: {question}
 Answer:
 """
 
-
 def simple_query(question: str, context: str, model: str) -> Tuple[str, str]:
     final_prompt = SIMPLE_PROMPT.format(question=question, context=context)
     final_answer = _call_backend(prompt=final_prompt, model=model)
     return final_answer, final_prompt
-
 
 CONFLICT_STAGE_ONE_PROMPT = """
 Generate a concise text that provides accurate and relevant information to answer the given question [{question}?]
@@ -87,7 +84,6 @@ External information: {context}
 Your own knowledge: {internal_knowledge}
 Answer:
 """
-
 
 def trustrag_query(question: str, context: str, model: str) -> Tuple[str, str]:
     state_one_prompt = CONFLICT_STAGE_ONE_PROMPT.format(question=question)
@@ -192,7 +188,6 @@ Dont output the step infomration and only output a short and concise answer.
 
 Answer:
 """
-
 
 def astute_query(question: str, context: str, model: str) -> Tuple[str, str]:
     # Stage one - Generate internal knowledge
