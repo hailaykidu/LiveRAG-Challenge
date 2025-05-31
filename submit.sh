@@ -3,7 +3,6 @@
 #SBATCH --job-name=rag-eval
 #SBATCH --cpus-per-task=4
 #SBATCH --gpus=1
-
 module load conda
 conda activate ragtifier
 
