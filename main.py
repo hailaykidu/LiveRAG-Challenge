@@ -12,7 +12,6 @@ import src.query as query
 from loguru import logger
 from dotenv import load_dotenv, find_dotenv
 
-
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="RAGtifier")
     parser.add_argument("--dataset_path", type=str, required=True, help="Path to the dataset file, if not specified, will use the database")
@@ -56,7 +55,6 @@ def get_query_func(method: str) -> query.QueryFunction:
         return query.instructrag_query
     else:
         raise ValueError(f"Invalid query method: {method}")
-
 
 @cache
 def get_retrieval_func(method: str) -> retrieval.RetrievalFunction | None:
